@@ -1,7 +1,6 @@
 using Grpc.Core;
-using Product;
 
-namespace Product.Services
+namespace ProductShop.Services
 {
     public class GreeterService : Greeter.GreeterBase
     {

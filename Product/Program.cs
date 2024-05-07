@@ -1,7 +1,10 @@
-using Product.Services;
+using Microsoft.EntityFrameworkCore;
+using ProductShop.Data;
+using ProductShop.Services;
 
 var builder = WebApplication.CreateBuilder(args);
 
+builder.Services.AddDbContext<ProductDbContext>(options => options.UseSqlServer(builder.Configuration["DefaultConnection"]));
 // Add services to the container.
 builder.Services.AddGrpc();
 

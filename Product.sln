@@ -3,9 +3,9 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.9.34728.123
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Product", "Product\Product.csproj", "{79FFEA8E-4559-4240-B7BC-8EED52B62CCE}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ProductShop", "Product\ProductShop.csproj", "{79FFEA8E-4559-4240-B7BC-8EED52B62CCE}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Product.Client", "Product.Client\Product.Client.csproj", "{D7C6E844-3B12-43A4-AFEB-D3089811FE57}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ProductShop.Client", "Product.Client\ProductShop.Client.csproj", "{D7C6E844-3B12-43A4-AFEB-D3089811FE57}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
