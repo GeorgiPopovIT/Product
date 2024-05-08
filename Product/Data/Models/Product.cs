@@ -1,4 +1,5 @@
-﻿using System.ComponentModel.DataAnnotations;
+﻿using Microsoft.EntityFrameworkCore;
+using System.ComponentModel.DataAnnotations;
 
 namespace ProductShop.Data.Models;
 
@@ -9,6 +10,7 @@ public class Product : BaseModel
     public string Name { get; set; }
 
     [Required]
+    [Precision(18,2)]
     public decimal Price { get; set; }
 
     [Required]

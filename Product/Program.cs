@@ -4,7 +4,7 @@ using ProductShop.Services;
 
 var builder = WebApplication.CreateBuilder(args);
 
-builder.Services.AddDbContext<ProductDbContext>(options => options.UseSqlServer(builder.Configuration["DefaultConnection"]));
+builder.Services.AddDbContext<ProductDbContext>(options => options.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection")));
 // Add services to the container.
 builder.Services.AddGrpc();
 
