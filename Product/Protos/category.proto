@@ -1,0 +1,17 @@
+syntax = "proto3";
+
+option csharp_namespace = "ProductShop.Protos";
+
+package category;
+
+service Category {
+	rpc SaveCategory(CategoryRequest) returns (CategoryResponse);
+}
+
+message CategoryRequest {
+	string name = 1;
+}
+
+message CategoryResponse {
+	bool isSuccess = 1;
+}

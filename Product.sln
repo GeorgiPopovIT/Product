@@ -6,6 +6,9 @@ MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ProductShop", "Product\ProductShop.csproj", "{79FFEA8E-4559-4240-B7BC-8EED52B62CCE}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ProductShop.Client", "Product.Client\ProductShop.Client.csproj", "{D7C6E844-3B12-43A4-AFEB-D3089811FE57}"
+	ProjectSection(ProjectDependencies) = postProject
+		{79FFEA8E-4559-4240-B7BC-8EED52B62CCE} = {79FFEA8E-4559-4240-B7BC-8EED52B62CCE}
+	EndProjectSection
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

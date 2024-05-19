@@ -1,12 +1,8 @@
 ﻿syntax = "proto3";
 
-option csharp_namespace = "ProductShop";
-
-package product;
 
 service Product {
 	rpc SaveProduct(ProductRequest) returns (ProductResponse);
-	rpc GetProducts() returns (ListProducts)
 }
 
 message ProductRequest {
@@ -17,8 +13,4 @@ message ProductRequest {
 
 message ProductResponse {
 	bool isSuccess = 1;
-}
-
-message ListProducts{
-	repeated ProductRequest products = 1;
 }
