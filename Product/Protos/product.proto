@@ -8,6 +8,8 @@ package product;
 service Product {
 	rpc SaveProduct(ProductRequest) returns (ProductResponse);
 	rpc GetProducts(google.protobuf.Empty) returns (ListProducts);
+	rpc UpdateProduct(ProductToUpdate) returns (ProductResponse);
+	rpc DeleteProduct(ProductId) returns (ProductResponse);
 }
 
 message ProductRequest {
@@ -19,7 +21,16 @@ message ProductRequest {
 message ProductResponse {
 	bool isSuccess = 1;
 }
+message ProductId{
+	int32 productId = 1;
+}
+message ProductToUpdate {
+	int32 id = 1;
+	string name = 2;
+	double price = 3;
+	int32 categoryId = 4;
+}
 
 message ListProducts{
-	repeated ProductRequest products = 0;
+	repeated ProductRequest products = 1;
 }

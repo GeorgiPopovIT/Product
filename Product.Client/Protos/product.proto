@@ -1,5 +1,6 @@
 ﻿syntax = "proto3";
 
+option csharp_namespace = "ProductShop";
 
 service Product {
 	rpc SaveProduct(ProductRequest) returns (ProductResponse);

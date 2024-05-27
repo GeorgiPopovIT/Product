@@ -1,11 +1,15 @@
 syntax = "proto3";
+import "google/protobuf/empty.proto";
 
-option csharp_namespace = "ProductShop.Protos";
+option csharp_namespace = "ProductShop";
 
 package category;
 
 service Category {
 	rpc SaveCategory(CategoryRequest) returns (CategoryResponse);
+	rpc GetCategories(google.protobuf.Empty) returns (ListCategories);
+	rpc UpdateCategory(CategoryToUpdate) returns (CategoryResponse);
+	rpc DeleteCategory(CategoryId) returns (CategoryResponse);
 }
 
 message CategoryRequest {
@@ -14,4 +18,16 @@ message CategoryRequest {
 
 message CategoryResponse {
 	bool isSuccess = 1;
+}
+
+message CategoryId{
+	int32 categoryId = 1;
+}
+message CategoryToUpdate {
+	int32 id = 1;
+	string name = 2;
+}
+
+message ListCategories{
+	repeated CategoryRequest categories = 1;
 }

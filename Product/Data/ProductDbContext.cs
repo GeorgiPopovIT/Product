@@ -10,7 +10,7 @@ public class ProductDbContext : DbContext
     {  }
 
     public DbSet<Models.Product> Products { get; set; }
-    public DbSet<Category> Categories { get; set; }
+    public DbSet<Models.Category> Categories { get; set; }
 
     public DbSet<Shop> Shops { get; set; }
 
